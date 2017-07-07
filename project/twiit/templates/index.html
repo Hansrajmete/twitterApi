@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+  <title>LiveHealth</title>{% load static %}
+  <link rel="shortcut icon" href="{% static "favicon.ico" %}" type="image/x-icon">
+  <link href="{% static "style.css" %}" rel="stylesheet"/>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+</head>
+<body>
+  <div id="post_tweets">
+    <br/><h1>Twitter API</h1>
+    <br/>
+<form class="#" action = "" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+      <textarea maxlength="140" name="texttweet" rows="1" required cols="10" placeholder="What is happening?"></textarea>
+      <br/>
+
+<label>
+        <i id="image_upload" class="fa fa-camera" title="Add Photo of you" aria-hidden="true"></i><p hidden>
+                {{ form.docfile }}
+            </p>
+      </label>
+
+
+      <button type="submit" class="myButton" value="Tweet">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+        <span >Tweet</span>
+      </button></form>
+  </div>
+
+          
+
+
+      <div id="recent_tweets">
+  <br/>
+  <br/>
+
+<ol>
+    {% for stats in statuses|slice:":50" %}
+            <li>
+            <img src="{{stats.user.profile_image_url}}" id="dp"/><div id = "names"><b><a href="https://twitter.com/{{ stats.user.screen_name }}">{{ stats.user.name }}</a></b><br/> <span id = "name">@{{ stats.user.screen_name }}</span></div><div id="time"><i>{{ stats.created_at }}</i></div><br/>
+
+                <p>{{ stats.text }}&nbsp;&nbsp;</p><h4><a href="{{ stats.urls.0.url }} ">{{ stats.urls.0.url }}</a></h4>
+                {% if stats.media.0.media_url %}
+                    <img src="{{ stats.media.0.media_url }}"/>
+                {% endif %}
+
+            </li>      <hr/>
+    {% endfor %}
+</ol>  </div>
+  <br/>
+</body>
+</html>

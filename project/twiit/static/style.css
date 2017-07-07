@@ -1,0 +1,142 @@
+
+*{
+  margin: 0px;
+}
+#post_tweets{
+  background-color: #1dcaff;
+}
+#recent_tweets{
+  background-color:  #F0F4F6;
+}
+textarea {
+    background-color: #FFFFFF;
+    height: 50px;
+    width: 500px;
+    transition: all 0.5s ease;
+    border: none;
+    border-radius: 4px;
+    padding: 5px;
+    color: #5D5C5C;
+    font-size: 1.2em;
+    margin-left: auto ;
+    margin-right: auto ;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, 0%)
+}
+textarea:focus{
+    height: 100px;
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #1dcaff;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #1dcaff;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #1dcaff;
+}
+h1{
+  text-align: center;
+  color:#FFFFFF;
+}
+.myButton {
+    background-color:#00aced;
+    border: none;
+    color: #ffffff;
+    padding: 7px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    top: -35px;
+    margin-left: 58%;
+    position:relative;
+    border-radius: 3px;
+    transition: all 0.5s ease;
+}
+.myButton:hover{
+  border-top-style: solid;
+  border-left-style: solid;
+  border-color: #0084b4;
+  border-width: 1px;
+  background-color: #0084b4;
+}
+.myButton:focus{
+    padding: 6px 18px;
+}
+#tweet{
+  background-color: inherit;
+}
+#image_upload{
+  margin-left: 35%;
+  color: #ffffff;
+  padding: 12px;
+  transition: all 0.5s ease;
+}
+#image_upload:hover{
+  border: 1px solid;
+  border-color: #0084b4;
+  color: #0084b4;
+  border-radius: 5px;
+}
+ol{
+  width: 700px;
+  margin: 0 auto;
+  background: #FFF;
+  border-radius: 10px;
+  list-style: none;
+  border: 1px solid;
+  border-color: #e6e6e6;
+}
+a{
+  color:#0084b4;
+  font-size: 17px;
+  text-decoration: none;
+}
+a:hover{
+  color: #005A7B;
+  text-decoration: underline;
+}
+#name{
+  color: #657786
+}
+p{
+  font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  float: none;
+  margin-top: 50px;
+}
+img{
+  height: auto;
+  width: auto;
+  margin-top: 10px;
+  border-radius: 3px;
+  max-width: 650px;
+}
+hr{
+  margin-top:10px;
+  margin-bottom:10px;
+  width: 95%;
+  color: #e6e6e6;
+}
+#dp{
+  height: 50px;
+  width: auto;
+  float: left;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+#names{
+  float: left;
+  margin-top: 10px;
+}
+#time{
+  float: right;
+  color: #657786;
+  margin-top: 10px;
+  margin-right: 50PX;
+}
